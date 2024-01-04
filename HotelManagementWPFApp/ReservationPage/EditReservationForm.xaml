@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="HotelManagementWPFApp.EditReservationForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HotelManagementWPFApp"
+            xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="900" Background="Transparent">
+    <Grid Background="White">
+
+        <StackPanel  VerticalAlignment="Center" Margin="60 0">
+            <TextBlock Text="Update Reservation" FontSize="20" HorizontalAlignment="Center"/>
+
+
+            <!--<TextBlock Text="Client Id" Margin="80 0" Foreground="Black"/>
+
+    <Border  BorderThickness="1" BorderBrush="#acb0af" Margin="80 8" CornerRadius="5">
+        <Grid Margin="7 9">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image  Height="20"/>
+
+            <TextBox x:Name="txtClientId" Style="{StaticResource textBox}"/>
+        </Grid>
+    </Border>-->
+            <Border  BorderThickness="1" BorderBrush="#acb0af" Background="#eeeeee" Margin="70 7" CornerRadius="5">
+                <Grid Margin="7 9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image  Height="20"/>
+                    <TextBox x:Name="txtReserveId" Background="#eeeeee" IsReadOnly="True" Style="{StaticResource textBox}"/>
+                </Grid>
+            </Border>
+            
+            <TextBlock Text="Client Id" Margin="80 0" Foreground="Black"/>
+            <Border  BorderThickness="1" BorderBrush="#acb0af" Margin="80 8" CornerRadius="5">
+                <Grid Margin="7 9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <ComboBox x:Name="cboClientId"
+                   DisplayMemberPath="ClientId"
+                   Style="{StaticResource CustomComboBoxStyle}"
+                   />
+                </Grid>
+            </Border>
+
+            <TextBlock Text="Room Type" Margin="80 0" Foreground="Black"/>
+            <Border  BorderThickness="1" BorderBrush="#acb0af" Margin="80 8" CornerRadius="5">
+                <Grid Margin="7 9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <ComboBox x:Name="cboRoomType"
+                       DisplayMemberPath="Type"
+                       Style="{StaticResource CustomComboBoxStyle}"
+                       SelectionChanged="cboRoomType_SelectionChanged"/>
+                </Grid>
+            </Border>
+
+            <TextBlock Text="Room No" Margin="80 0" Foreground="Black"/>
+            <Border  BorderThickness="1" BorderBrush="#acb0af" Margin="80 8" CornerRadius="5">
+                <Grid Margin="7 9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ComboBox x:Name="cboRoomNo"
+                      DisplayMemberPath="RoomNo"
+                      Style="{StaticResource CustomComboBoxStyle}"
+                      />
+                </Grid>
+            </Border>
+            <TextBlock Text="Date In" Margin="80 0" Foreground="Black"/>
+            <Border  BorderThickness="1" BorderBrush="#acb0af" Margin="80 8" CornerRadius="5">
+                <Grid Margin="7 9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image  Height="20"/>
+
+                    <DatePicker x:Name="dateTime_DateIn" Style="{StaticResource textBox}"/>
+                </Grid>
+            </Border>
+
+            <TextBlock Text="Date Out" Margin="80 0" Foreground="Black"/>
+            <Border  BorderThickness="1" BorderBrush="#acb0af" Margin="80 8" CornerRadius="5">
+                <Grid Margin="7 9">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image  Height="20"/>
+
+                    <DatePicker x:Name="dateTime_DateOut" Style="{StaticResource textBox}"/>
+                </Grid>
+            </Border>
+
+
+
+
+            <Button Click="ButtonUpdate_Click" HorizontalAlignment="Center" Style="{StaticResource addButton}">
+                <StackPanel Orientation="Horizontal">
+                    <Icon:PackIconMaterial Kind="SquareEditOutline" VerticalAlignment="Center" Width="11" Height="11"
+Margin="0 1 8 0"/>
+                    <TextBlock Text="Update Reservation"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
